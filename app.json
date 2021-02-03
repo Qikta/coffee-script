@@ -19,6 +19,18 @@
     "ios": {
       "supportsTablet": true
     },
+    "extra": {
+      "firebase": {
+        "apiKey": "AIzaSyC5AfoIouIsZAnVz8IvhWk0_l7PJH-mKHM",
+        "authDomain": "coffee-script-27fb9.firebaseapp.com",
+        "databaseURL": "https://coffee-script-27fb9.firebaseio.com",
+        "projectId": "coffee-script-27fb9",
+        "storageBucket": "coffee-script-27fb9.appspot.com",
+        "messagingSenderId": "944580078905",
+        "appId": "1:944580078905:web:04d542c0dc80d9f9584ce8",
+        "measurementId": "G-7QX5HCYR6T"
+      }
+    },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
