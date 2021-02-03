@@ -1,4 +1,4 @@
-export interface Drip {
+export interface IDrip {
     name: string;
     amount: number;
     water_amount: number;

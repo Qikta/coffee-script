@@ -6,11 +6,11 @@ import {
   TouchableOpacity,
   Animated,
 } from "react-native";
-import { Drip } from "../type/drip";
+import { IDrip } from "../type/drip";
 import { CountdownCircleTimer } from "react-native-countdown-circle-timer";
 /* interface */
 type Props = {
-  drip: Drip;
+  drip: IDrip;
 };
 const { width } = Dimensions.get("window");
 const CONTAINER_WIDTH = width;

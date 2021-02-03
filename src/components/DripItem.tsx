@@ -1,9 +1,9 @@
 import React from "react";
 import { View, Text, Image, StyleSheet, Dimensions, TouchableOpacity } from "react-native";
-import { Drip } from "../type/drip";
+import { IDrip } from "../type/drip";
 /* interface */
 interface Props {
-  drip: Drip;
+  drip: IDrip;
   onPress: () => void
 }
 

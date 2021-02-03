@@ -9,12 +9,12 @@ import {
   Button,
   GestureResponderEvent,
 } from "react-native";
-import { Drip } from "../type/drip";
-import { DripSettings } from "../type/dripSettings"
+import { IDrip } from "../type/drip";
+import { IDripSettings } from "../type/dripSettings"
 /* interface */
 type Props = {
-  drip: Drip;
-  dripSettings: DripSettings;
+  drip: IDrip;
+  dripSettings: IDripSettings;
   onPress1: (event: GestureResponderEvent) => void;
   onPress2: (event: GestureResponderEvent) => void;
 };

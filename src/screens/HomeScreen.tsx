@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { StyleSheet, Text, SafeAreaView, FlatList } from "react-native";
 import { getDrip } from "../lib/firebase";
 import { DripItem } from "../components/DripItem";
-import { Drip } from "../type/drip";
+import { IDrip } from "../type/drip";
 
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RootStackParamList } from "../type/navigation";
@@ -13,7 +13,7 @@ type Props = {
 };
 
 export const HomeScreen = ({ navigation }: Props) => {
-  const [drips, setDrips] = useState<Drip[]>([]);
+  const [drips, setDrips] = useState<IDrip[]>([]);
 
   useEffect(() => {
     getFirebaseItems();
@@ -24,7 +24,7 @@ export const HomeScreen = ({ navigation }: Props) => {
     setDrips(drips);
   };
 
-  const onPressItem = (drip: Drip) => {
+  const onPressItem = (drip: IDrip) => {
     navigation.navigate("Drip", { drip });
   };
 
@@ -32,7 +32,7 @@ export const HomeScreen = ({ navigation }: Props) => {
     <SafeAreaView style={styles.container}>
       <FlatList
         data={drips}
-        renderItem={({ item }: { item: Drip }) => (
+        renderItem={({ item }: { item: IDrip }) => (
           <DripItem drip={item} onPress={() => onPressItem(item)} />
         )}
         keyExtractor={(item, index) => index.toString()}

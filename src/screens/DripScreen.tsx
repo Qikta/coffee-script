@@ -8,8 +8,8 @@ import { RootStackParamList } from "../type/navigation"
 import { StackNavigationProp } from '@react-navigation/stack';
 import { IconButton } from "../components/IconButton"
 import { DripDetail } from '../components/DripDetail'
-import { Drip } from '../type/drip'
-import { DripSettings } from "../type/dripSettings"
+import { IDrip } from '../type/drip'
+import { IDripSettings } from "../type/dripSettings"
 
 type Props = {
   navigation: StackNavigationProp<RootStackParamList, "Drip">
@@ -19,7 +19,7 @@ type Props = {
 export const DripScreen: React.FC<Props> = ({navigation, route}: Props) => {
   const { drip } = route.params;
 
-  const [dripSettings, setDripSettings] = useState<DripSettings>(
+  const [dripSettings, setDripSettings] = useState<IDripSettings>(
     {
       actual_amount: String(drip.amount),
       actual_water_amount: String(drip.water_amount),

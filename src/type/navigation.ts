@@ -1,14 +1,14 @@
-import { Drip } from "./drip";
+import { IDrip } from "./drip";
 import { Script } from "./script"
-import { DripSettings } from "./dripSettings"
+import { IDripSettings } from "./dripSettings"
 
 export type RootStackParamList = {
   Main: undefined;
   Home: undefined;
-  Drip: { drip: Drip };
+  Drip: { drip: IDrip };
   Script: { script: Script};
-  DripSetting: { drip: Drip, dripSettings: DripSettings};
+  DripSetting: { drip: IDrip, dripSettings: IDripSettings};
   CreateScript: undefined;
-  Timer: {drip: Drip};
+  Timer: {drip: IDrip};
   ScriptDetail: { script: Script}
 };

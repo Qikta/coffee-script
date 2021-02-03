@@ -2,7 +2,7 @@ import * as firebase from "firebase/app";
 import "firebase/firestore";
 import Constants from "expo-constants";
 /* interface */
-import { Drip } from "../type/drip";
+import { IDrip } from "../type/drip";
 import { Script } from "../type/script"
 
 if (!firebase.apps.length) {
@@ -12,7 +12,7 @@ if (!firebase.apps.length) {
 export const getDrip = async () => {
   try {
     const snapshot = await firebase.firestore().collection("drip").get();
-    const drips = snapshot.docs.map((doc) => doc.data() as Drip);
+    const drips = snapshot.docs.map((doc) => doc.data() as IDrip);
 
     return drips;
   } catch (err) {
